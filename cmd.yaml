@@ -1,0 +1,15 @@
+session_name: cmd
+windows:
+- window_name: monitor
+  layout: even-horizontal
+  shell_command_before:
+    - cd ~           # run as a first command in all panes
+  panes:
+    - shell_command: # pane no. 1
+        - top        # run multiple commands in this pane
+- window_name: cmd
+  shell_command_before:
+    - cd ~           # run as a first command in all panes
+  panes:
+    - shell_command: # pane no. 1
+        - clear      # run multiple commands in this pane

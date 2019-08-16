@@ -1,0 +1,14 @@
+session_name: mdrc
+windows:
+- window_name: vimrc
+  layout: tiled
+  shell_command_before:
+    - .vimrc                    # run as a first command in all panes
+- window_name: zshrc
+  layout: tiled
+  shell_command_before:
+    - .zshrc                    # run as a first command in all panes
+- window_name: tj
+  layout: tiled
+  shell_command_before:
+    - tj.md                    # run as a first command in all panes
