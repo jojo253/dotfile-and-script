@@ -5,8 +5,9 @@ when=$(date "+%Y-%m-%d %H:%M:%S")
 cd $HOME/moyugeblog
 sudo hexo clean
 sudo hexo g -d
-git commit -a -m "${when} update"
-git push
+sudo git add -f *
+sudo git commit -m "${when} update"
+sudo git push
 cd $place
 
 exit 0
