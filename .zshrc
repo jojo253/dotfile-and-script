@@ -67,8 +67,6 @@ export NVM_NODEJS_ORG_MIRROR=https://npm.taobao.org/dist
 #================================================
 #path
 export PATH="$PATH:/usr/local/stata15/"
-# export PATH="$PATH:$HOME/.nvm"
-# export PATH="$PATH:/home/moyuge/.npm"
 
 #=================================================
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
