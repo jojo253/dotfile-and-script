@@ -1,6 +1,6 @@
 export DISABLE_AUTO_TITLE='true'
 
-source ~/antigen.zsh
+source ~/antigen/antigen.zsh
 
 # 加载oh-my-zsh库
 antigen use oh-my-zsh
@@ -79,3 +79,6 @@ alias tks='tmux kill-server'
 
 #=================================================
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh

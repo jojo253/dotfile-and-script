@@ -1,35 +1,4 @@
-" 显示行号
-set number
-
-" 不创建交换文件
-set noswapfile
-
-" 设置leader键
-" let mapleader = ","
-
-" 搜索高亮
-set hls is
-
-" 显示未完成的命令
-set showcmd
-
-" 默认十进制
-set nrformats=
-
-" 折叠方法
-set foldmethod=indent
-set foldopen=all
-" set foldclose=all
-
-" Space折叠
-nnoremap <space> za
-
-" 检查拼写
-" set spell
-
-" 鼠标可以在任何地方使用
-set mouse=a
-
+source ~/basic.vim
 "==============================
 " 插件管理器: vim-plug
 " 安装插件 :PlugInstall
@@ -77,7 +46,7 @@ Plug 'Shougo/neocomplete.vim'
 " Python智能补全
 " Plug 'rkulla/pydiction'
 " tag list
-Plug 'vim-scripts/taglist.vim'
+" Plug 'vim-scripts/taglist.vim'
 " 撤销记录
 Plug 'mbbill/undotree'
 " 文件树
@@ -93,10 +62,6 @@ Plug 'easymotion/vim-easymotion'
 call plug#end()
 
 "==============================
-" maps
-
-nnoremap ,w :w<CR>
-
 " taglist
 nnoremap ,t :Tlist<CR>
 " undotree
@@ -105,39 +70,6 @@ nnoremap ,u :UndotreeToggle<CR>
 nnoremap ,n :NERDTreeMirror<CR>
 nnoremap ,n :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
-
-map ,c \ci
-" map for esc
-imap jj <Esc>
-" imap <C-[> <Esc>
-
-" 正则替换快捷键，使用:作为分隔符
-noremap ;; :%s:::g<Left><Left><Left>
-noremap ;' :%s:::cg<Left><Left><Left><Left>
-"==============================
-
-map <F5> :call RunCode()<CR>
-func! RunCode()
-	: let filename=split(expand('%:p'),"/")[-1]
-	exec "w"
-	echo filename
-	" if filename == ".vimrc"
-		" exec "source ~/.vimrc"
-	if filename == ".zshrc"
-		exec "! source ~/.zshrc"
-	elseif filename == ".tmux.conf"
-		exec "!tmux source ~/.tmux.conf"
-	elseif &filetype == "c" || &filetype == "cpp" || &filetype == "haskell"
-		exec "! %<.exe"
-	elseif &filetype == 'python'
-		exec "!time python3 %"
-	elseif &filetype == 'html'
-		exec "!google-chrome %"
-	elseif &filetype == 'sh' || &filetype == 'zsh'
-		exec "!./%"
-	endif
-endfunc
-
 "==============================
 " nerd_commenter
 
