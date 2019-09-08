@@ -1,0 +1,13 @@
+#!/bin/zsh
+
+place=$(pwd)
+when=$(date "+%Y-%m-%d %H:%M:%S")
+cd $HOME/moyugeblog
+hexo clean
+hexo g -d
+git add -f *
+git commit -m "${when} update"
+git push
+cd $place
+
+exit 0

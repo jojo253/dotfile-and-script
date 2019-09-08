@@ -1,0 +1,22 @@
+#!/bin/zsh
+
+cp -f ~/basic.vim ~/dotfile-and-script/
+cp -f ~/.vimrc ~/dotfile-and-script/
+cp -f ~/.zshrc ~/dotfile-and-script/
+cp -f ~/.p10k.zsh ~/dotfile-and-script/
+cp -f ~/.npmrc ~/dotfile-and-script/
+cp -f ~/.tmux.conf ~/dotfile-and-script/
+
+sudo cp -f /usr/local/bin/* ~/dotfile-and-script/bin
+
+cp -f ~/.tmuxp/* ~/dotfile-and-script/.tmuxp
+
+place=$(pwd)
+when=$(date "+%Y-%m-%d %H:%M:%S")
+cd $HOME/dotfile-and-script/
+git add -f *
+git commit -m "${when} update"
+git push
+cd $place
+
+exit 0
