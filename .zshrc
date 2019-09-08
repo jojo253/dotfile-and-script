@@ -23,7 +23,6 @@ antigen bundle command-not-found
 antigen bundle rupa/z z.sh
 
 # 语法高亮功能
-# antigen bundle zdharma/fast-syntax-highlighting
 antigen bundle zsh-users/zsh-syntax-highlighting
 
 # 代码提示功能
@@ -40,24 +39,6 @@ antigen theme romkatv/powerlevel10k
 # 保存更改
 antigen apply
 
-# ZSH_THEME=powerlevel10k/powerlevel10k
-
-__conda_setup="$('/home/moyuge/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/moyuge/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/moyuge/anaconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/moyuge/anaconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
-export PATH="$PATH:/opt/mssql-tools/bin"
-
-export PATH="$PATH:/home/moyuge/android-studio-ide-183.5692245-linux/android-studio/bin"
 prompt_context() {}
 
 export TERM=xterm-256color
@@ -76,6 +57,18 @@ alias tcbk='tldr'
 alias tls='tmux ls'
 alias tnew='tmux new -s'
 alias tks='tmux kill-server'
+
+#=================================================
+#nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export NVM_NODEJS_ORG_MIRROR=https://npm.taobao.org/dist
+#================================================
+#path
+export PATH="$PATH:/usr/local/stata15/"
+# export PATH="$PATH:$HOME/.nvm"
+# export PATH="$PATH:/home/moyuge/.npm"
 
 #=================================================
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
