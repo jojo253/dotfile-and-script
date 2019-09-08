@@ -66,8 +66,8 @@ export TERM=xterm-256color
 #alias
 alias .vimrc="vim ~/.vimrc"
 alias .zshrc="vim ~/.zshrc"
-alias tj.md="vim ~/moyugeblog/source/_posts/tj.md"
 alias v='vim'
+alias va='vim * -O'
 
 alias fanyi='trans :zh'
 
