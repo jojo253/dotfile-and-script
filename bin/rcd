@@ -14,7 +14,7 @@ cp -f ~/.tmuxp/* ~/dotfile-and-script/.tmuxp
 place=$(pwd)
 when=$(date "+%Y-%m-%d %H:%M:%S")
 cd $HOME/dotfile-and-script/
-git add -f *
+git add -A *
 git commit -m "${when} update"
 git push
 cd $place
