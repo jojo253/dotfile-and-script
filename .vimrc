@@ -28,8 +28,6 @@ Plug 'SirVer/ultisnips'
 Plug 'zedr/zope-snipmate-bundle'
 " 彩虹括号
 Plug 'kien/rainbow_parentheses.vim'
-" 对称括号
-" Plug 'jiangmiao/auto-pairs'
 " 成对操作 " ys cs ds
 Plug 'tpope/vim-surround'
 " 注释
@@ -41,14 +39,6 @@ Plug 'Chiel92/vim-autoformat'
 " Python自动补全
 Plug 'davidhalter/jedi-vim'
 Plug 'Shougo/neocomplete.vim'
-" Python相关
-" Plug 'python-mode/python-mode'
-" Python智能补全
-" Plug 'rkulla/pydiction'
-" tag list
-" Plug 'vim-scripts/taglist.vim'
-" 撤销记录
-Plug 'mbbill/undotree'
 " 文件树
 Plug 'scrooloose/nerdtree'
 " 单词下划线
@@ -62,18 +52,16 @@ Plug 'easymotion/vim-easymotion'
 call plug#end()
 
 "==============================
-" taglist
-nnoremap ,t :Tlist<CR>
-" undotree
-nnoremap ,u :UndotreeToggle<CR>
 " nerdtree
 nnoremap ,n :NERDTreeMirror<CR>
 nnoremap ,n :NERDTreeToggle<CR>
-let NERDTreeShowHidden=1
 "==============================
 " nerd_commenter
 
 let g:NERDSpaceDelims = 1
+
+"==============================
+" nerd_tree
 " autocmd vimenter * NERDTree  "自动开启Nerdtree
 " let g:NERDTreeWinSize = 25 "设定 NERDTree 视窗大小
 " let NERDTreeShowBookmarks=1  " 开启Nerdtree时自动显示Bookmarks
