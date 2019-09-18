@@ -1,11 +1,25 @@
 #!/bin/zsh
 
-cp -f ~/basic.vim ~/dotfile-and-script/
-cp -f ~/.vimrc ~/dotfile-and-script/
-cp -f ~/.zshrc ~/dotfile-and-script/
-cp -f ~/.p10k.zsh ~/dotfile-and-script/
-cp -f ~/.npmrc ~/dotfile-and-script/
-cp -f ~/.tmux.conf ~/dotfile-and-script/
+homefile=(
+basic.vim
+.vimrc
+.zshrc
+.p10k.zsh
+.npmrc
+.tmux.conf
+)
+
+for i in $homefile
+do
+	cp -f ~/$i ~/dotfile-and-script/
+done
+
+# cp -f ~/basic.vim ~/dotfile-and-script/
+# cp -f ~/.vimrc ~/dotfile-and-script/
+# cp -f ~/.zshrc ~/dotfile-and-script/
+# cp -f ~/.p10k.zsh ~/dotfile-and-script/
+# cp -f ~/.npmrc ~/dotfile-and-script/
+# cp -f ~/.tmux.conf ~/dotfile-and-script/
 
 sudo cp -f /usr/local/bin/* ~/dotfile-and-script/bin
 
