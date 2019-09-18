@@ -29,6 +29,9 @@ set mouse=a
 
 " 将无名寄存器和系统剪切板关联
 set clipboard=unnamed
+
+" markdown显示当前行所有内容
+set cursorline
 "==============================
 " maps for origin vim
 " noremap指非递归映射
