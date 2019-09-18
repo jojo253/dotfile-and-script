@@ -58,6 +58,7 @@ alias tls='tmux ls'
 alias tnew='tmux new -s'
 alias tks='tmux kill-server'
 
+alias sai='sudo apt install'
 #=================================================
 #nvm
 export NVM_DIR="$HOME/.nvm"
