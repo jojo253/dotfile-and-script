@@ -14,19 +14,12 @@ do
 	cp -f ~/$i ~/dotfile-and-script/
 done
 
-# cp -f ~/basic.vim ~/dotfile-and-script/
-# cp -f ~/.vimrc ~/dotfile-and-script/
-# cp -f ~/.zshrc ~/dotfile-and-script/
-# cp -f ~/.p10k.zsh ~/dotfile-and-script/
-# cp -f ~/.npmrc ~/dotfile-and-script/
-# cp -f ~/.tmux.conf ~/dotfile-and-script/
+sudo cp -rf /usr/local/bin ~/dotfile-and-script
 
-sudo cp -f /usr/local/bin/* ~/dotfile-and-script/bin
+cp -rf ~/.config/i3 ~/dotfile-and-script/.config
+cp -rf ~/.config/ranger ~/dotfile-and-script/.config
 
-cp -rf ~/.config/i3 ~/dotfile-and-script/.config/i3
-cp -rf ~/.config/ranger ~/dotfile-and-script/.config/ranger
-
-cp -f ~/.tmuxp/* ~/dotfile-and-script/.tmuxp
+cp -rf ~/.tmuxp ~/dotfile-and-script
 
 place=$(pwd)
 when=$(date "+%Y-%m-%d %H:%M:%S")
