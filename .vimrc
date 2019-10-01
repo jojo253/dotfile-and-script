@@ -8,6 +8,8 @@ call plug#begin('~/.vim/plugged')
 
 " 开始界面
 Plug 'mhinz/vim-startify'
+" icon
+Plug 'ryanoasis/vim-devicons'
 " 界面配色主题
 Plug 'morhetz/gruvbox'
 Plug 'dracula/vim'
@@ -65,6 +67,9 @@ Plug 'mattn/emmet-vim'
 Plug 'drmingdrmer/vim-syntax-markdown'
 
 call plug#end()
+"==============================
+" Startify
+nnoremap st :Startify<CR>
 "==============================
 " nerdtree
 nnoremap ,n :NERDTreeMirror<CR>

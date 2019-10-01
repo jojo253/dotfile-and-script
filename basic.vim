@@ -32,6 +32,9 @@ set clipboard=unnamed
 
 " markdown显示当前行所有内容
 set cursorline
+
+" 编码
+set encoding=UTF-8
 "==============================
 " maps for origin vim
 " noremap指非递归映射

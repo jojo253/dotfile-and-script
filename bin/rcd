@@ -23,6 +23,9 @@ done
 
 sudo cp -f /usr/local/bin/* ~/dotfile-and-script/bin
 
+cp -rf ~/.config/i3 ~/dotfile-and-script/.config/i3
+cp -rf ~/.config/ranger ~/dotfile-and-script/.config/ranger
+
 cp -f ~/.tmuxp/* ~/dotfile-and-script/.tmuxp
 
 place=$(pwd)

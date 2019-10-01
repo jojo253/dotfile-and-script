@@ -50,6 +50,8 @@ alias .zshrc="vim ~/.zshrc"
 alias v='vim'
 alias va='vim * -O'
 
+alias ra='ranger'
+
 alias fanyi='trans :zh'
 
 alias tcbk='tldr'
