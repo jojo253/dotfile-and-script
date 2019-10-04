@@ -4,10 +4,19 @@ place=$(pwd)
 when=$(date "+%Y-%m-%d %H:%M:%S")
 cd $HOME/moyugeblog
 hexo clean
-hexo g -d
-git add -f --all
+echo "###clean complete###"
+hexo g
+echo "###generate complete###"
+hexo d
+echo "###deploy complete###"
+git add -f *
+echo "###add complete###"
 git commit -m "${when} update"
+echo "###commit complete###"
+git fetch
+echo "###fetch complete###"
 git push
+echo "###push complete###"
 cd $place
 
 exit 0
