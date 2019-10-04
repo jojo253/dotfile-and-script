@@ -5,7 +5,7 @@ when=$(date "+%Y-%m-%d %H:%M:%S")
 cd $HOME/moyugeblog
 hexo clean
 hexo g -d
-git add -f *
+git add -f --all
 git commit -m "${when} update"
 git push
 cd $place
