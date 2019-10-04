@@ -38,6 +38,7 @@ Plug 'scrooloose/nerdtree'
 " 操作
 
 " 代码补全
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
 Plug 'garbas/vim-snipmate'
@@ -53,11 +54,12 @@ Plug 'vim-syntastic/syntastic'
 " 格式化
 Plug 'Chiel92/vim-autoformat'
 " Python自动补全
-Plug 'davidhalter/jedi-vim'
-Plug 'Shougo/neocomplete.vim'
+" Plug 'davidhalter/jedi-vim'
+" Plug 'Shougo/neocomplete.vim'
 " 快速跳转 <leader><leader>w
 Plug 'easymotion/vim-easymotion'
 
+Plug 'vim-scripts/DrawIt'
 "==============================
 " 文本格式
 
@@ -78,7 +80,9 @@ nnoremap ,n :NERDTreeToggle<CR>
 " nerd_commenter
 
 let g:NERDSpaceDelims = 1
-
+"==============================
+" nerd_commenter
+let g:autoformat_verbosemode=1
 "==============================
 " nerd_tree
 " autocmd vimenter * NERDTree  "自动开启Nerdtree

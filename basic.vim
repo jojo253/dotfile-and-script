@@ -10,6 +10,9 @@ let mapleader = ","
 " 搜索高亮
 set hls is
 
+" 查找忽略大小写
+set ignorecase
+
 " 显示未完成的命令
 set showcmd
 
@@ -84,3 +87,5 @@ func! RunCode()
 	endif
 endfunc
 "==============================
+" Call figlet
+map tx :r !figlet 

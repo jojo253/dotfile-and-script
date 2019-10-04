@@ -7,6 +7,9 @@ basic.vim
 .p10k.zsh
 .npmrc
 .tmux.conf
+.i3status.conf
+.Rprofile
+.gitconfig
 )
 
 for i in $homefile
