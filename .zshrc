@@ -45,10 +45,10 @@ export TERM=xterm-256color
 
 #=================================================
 #alias
-alias .vimrc="vim ~/.vimrc"
-alias .zshrc="vim ~/.zshrc"
-alias v='vim'
-alias va='vim * -O'
+alias .vimrc="nvim ~/.vimrc"
+alias .zshrc="nvim ~/.zshrc"
+alias v='nvim'
+alias va='nvim * -O'
 
 alias ra='ranger'
 

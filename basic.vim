@@ -11,7 +11,7 @@ let mapleader = ","
 set hls is
 
 " 查找忽略大小写
-set ignorecase
+" set ignorecase
 
 " 显示未完成的命令
 set showcmd

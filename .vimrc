@@ -28,6 +28,14 @@ Plug 'itchyny/vim-cursorword'
 Plug 'lfv89/vim-interestingwords'
 " markdown实时预览
 Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
+
+"==============================
+" 写作
+
+" 字数统计
+Plug 'ChesleyTan/wordCount.vim'
+" 语法
+Plug 'rhysd/vim-grammarous'
 "==============================
 " 文件
 
@@ -39,12 +47,11 @@ Plug 'scrooloose/nerdtree'
 
 " 代码补全
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'MarcWeber/vim-addon-mw-utils'
-Plug 'tomtom/tlib_vim'
-Plug 'garbas/vim-snipmate'
+" Plug 'garbas/vim-snipmate'
 Plug 'honza/vim-snippets'
 Plug 'SirVer/ultisnips'
-Plug 'zedr/zope-snipmate-bundle'
+" Plug 'zedr/zope-snipmate-bundle'
+Plug 'zxqfl/tabnine-vim'
 " 成对操作 " ys cs ds
 Plug 'tpope/vim-surround'
 " 注释
@@ -53,12 +60,10 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'vim-syntastic/syntastic'
 " 格式化
 Plug 'Chiel92/vim-autoformat'
-" Python自动补全
-" Plug 'davidhalter/jedi-vim'
-" Plug 'Shougo/neocomplete.vim'
 " 快速跳转 <leader><leader>w
 Plug 'easymotion/vim-easymotion'
 
+" 画图
 Plug 'vim-scripts/DrawIt'
 "==============================
 " 文本格式
@@ -67,6 +72,11 @@ Plug 'vim-scripts/DrawIt'
 Plug 'mattn/emmet-vim'
 " mathjax
 Plug 'drmingdrmer/vim-syntax-markdown'
+
+"==============================
+" 依赖
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'tomtom/tlib_vim'
 
 call plug#end()
 "==============================
@@ -140,3 +150,6 @@ let g:UltiSnipsExpandTrigger = '<tab>'
 let g:UltiSnipsJumpForwardTrigger = '<tab>'
 let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
 
+"==============================
+" wordCount
+set statusline+=%{wordCount#WordCount()}
