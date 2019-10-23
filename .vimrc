@@ -28,7 +28,13 @@ Plug 'itchyny/vim-cursorword'
 Plug 'lfv89/vim-interestingwords'
 " markdown实时预览
 Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
+" markdown toc
+Plug 'ajorgensen/vim-markdown-toc'
 
+Plug 'xolox/vim-misc'
+Plug 'xolox/vim-easytags'
+Plug 'majutsushi/tagbar'
+Plug 'jszakmeister/markdown2ctags'
 "==============================
 " 写作
 
@@ -65,6 +71,9 @@ Plug 'easymotion/vim-easymotion'
 
 " 画图
 Plug 'vim-scripts/DrawIt'
+
+" 困难模式
+Plug 'takac/vim-hardtime'
 "==============================
 " 文本格式
 
@@ -77,6 +86,7 @@ Plug 'drmingdrmer/vim-syntax-markdown'
 " 依赖
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
+Plug 'vim-scripts/fcitx.vim'
 
 call plug#end()
 "==============================
@@ -142,7 +152,7 @@ let g:indentLine_setColors = 0
 let g:indentLine_concealcursor = ''
 "==============================
 " easymotion
-nmap ss <Plug(easymotion-s2)
+nmap ss <Plug>(easymotion-s2)
 
 "==============================
 " snippet
@@ -153,3 +163,25 @@ let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
 "==============================
 " wordCount
 set statusline+=%{wordCount#WordCount()}
+
+"==============================
+" markdown2ctags
+nmap <F8> :TagbarToggle<CR>
+" Add support for markdown files in tagbar.
+let g:tagbar_type_markdown = {
+    \ 'ctagstype': 'markdown',
+    \ 'ctagsbin' : '/home/moyuge/.vim/plugged/markdown2ctags/markdown2ctags.py',
+    \ 'ctagsargs' : '-f - --sort=yes --sro=»',
+    \ 'kinds' : [
+        \ 's:sections',
+        \ 'i:images'
+    \ ],
+    \ 'sro' : '»',
+    \ 'kind2scope' : {
+        \ 's' : 'section',
+    \ },
+    \ 'sort': 0,
+\ }
+
+"==============================
+let g:hardtime_default_on = 1

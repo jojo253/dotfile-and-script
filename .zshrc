@@ -43,12 +43,13 @@ prompt_context() {}
 
 export TERM=xterm-256color
 
+export LANG=en_US.UTF-8
 #=================================================
 #alias
-alias .vimrc="nvim ~/.vimrc"
-alias .zshrc="nvim ~/.zshrc"
-alias v='nvim'
-alias va='nvim * -O'
+alias .vimrc="vim ~/.vimrc"
+alias .zshrc="vim ~/.zshrc"
+alias v='vim'
+alias va='vim * -O'
 
 alias ra='ranger'
 
@@ -61,6 +62,8 @@ alias tnew='tmux new -s'
 alias tks='tmux kill-server'
 
 alias sai='sudo apt install'
+
+alias gnome-control-center='env XDG_CURRENT_DESKTOP=GNOME gnome-control-center'
 #=================================================
 #nvm
 export NVM_DIR="$HOME/.nvm"
@@ -70,6 +73,7 @@ export NVM_NODEJS_ORG_MIRROR=https://npm.taobao.org/dist
 #================================================
 #path
 export PATH="$PATH:/usr/local/stata15/"
+export PATH="$PATH:/usr/local/Zotero_linux-x86_64/"
 
 #=================================================
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

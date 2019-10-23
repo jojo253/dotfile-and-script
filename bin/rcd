@@ -17,7 +17,18 @@ do
 	cp -f ~/$i ~/dotfile-and-script/
 done
 
-sudo cp -rf /usr/local/bin ~/dotfile-and-script
+scriptfile=(
+rcd
+tmuxen
+hexoen
+)
+
+for i in $scriptfile
+do
+	cp -f /usr/local/bin/$i ~/dotfile-and-script/bin
+done
+
+# sudo cp -rf /usr/local/bin ~/dotfile-and-script
 
 cp -rf ~/.config/i3 ~/dotfile-and-script/.config
 cp -rf ~/.config/ranger ~/dotfile-and-script/.config

@@ -1,6 +1,9 @@
 " 显示行号
 set number
 
+" 相对行号
+set relativenumber
+
 " 不创建交换文件
 set noswapfile
 
@@ -31,13 +34,20 @@ set foldopen=all
 set mouse=a
 
 " 将无名寄存器和系统剪切板关联
-set clipboard=unnamed
+" set clipboard=unnamed
+set clipboard=unnamedplus
 
 " markdown显示当前行所有内容
 set cursorline
 
 " 编码
 set encoding=UTF-8
+
+" normal 关闭中文输入法
+set noimdisable
+
+" 刷新
+set updatetime=300
 "==============================
 " maps for origin vim
 " noremap指非递归映射
@@ -88,4 +98,4 @@ func! RunCode()
 endfunc
 "==============================
 " Call figlet
-map tx :r !figlet 
+map tx :r !figlet
