@@ -35,6 +35,8 @@ cp -rf ~/.config/ranger ~/dotfile-and-script/.config
 
 cp -rf ~/.tmuxp ~/dotfile-and-script
 
+cp -rf ~/.vim/UltiSnips ~/dotfile-and-script/.vim
+
 place=$(pwd)
 when=$(date "+%Y-%m-%d %H:%M:%S")
 cd $HOME/dotfile-and-script/

@@ -1,0 +1,94 @@
+snippet box "Box"
+`!p snip.rv = '┌' + '─' * (len(t[1]) + 2) + '┐'`
+│ $1 │
+`!p snip.rv = '└' + '─' * (len(t[1]) + 2) + '┘'`
+$0
+endsnippet
+
+snippet '([A-Za-z])(\d)' "auto subscript" wr
+`!p snip.rv = match.group(1)`_`!p snip.rv = match.group(2)`
+endsnippet
+
+snippet '([A-Za-z])_(\d\d)' "auto subscript2" wr
+`!p snip.rv = match.group(1)`_{`!p snip.rv = match.group(2)`}
+endsnippet
+
+priority 1000
+snippet '^.*\)/' "() Fraction" wr
+`!p
+stripped = match.string[:-1]
+depth = 0
+i = len(stripped) - 1
+while True:
+	if stripped[i] == ')': depth += 1
+	if stripped[i] == '(': depth -= 1
+	if depth == 0: break;
+	i -= 1
+snip.rv = stripped[0:i] + "\\frac{" + stripped[i+1:-1] + "}"
+`{$1}$0
+endsnippet
+
+snippet sr "^2" i
+^2
+endsnippet
+
+snippet cb "^3" i
+^3
+endsnippet
+
+snippet compl "complement" i
+^{c}
+endsnippet
+
+snippet td "superscript" i
+^{$1}$0
+endsnippet
+
+snippet // "Fraction" i
+\\frac{$1}{$2}$0
+endsnippet
+
+snippet '((\d+)|(\d*)(\\)?([A-Za-z]+)((\^|_)(\{\d+\}|\d))*)/' "Fraction" wr
+\\frac{`!p snip.rv = match.group(1)`}{$1}$0
+endsnippet
+
+# snippet / "Fraction" i
+# \\frac{${VISUAL}}{$1}$0
+# endsnippet
+
+snippet mermaid "Mermaid"
+\`\`\`mermaid
+graph TB
+	A($1)
+	B($2)
+	A-->B
+\`\`\`
+endsnippet
+
+snippet sum "sum" i
+\\sum_{i=1}^{n}
+endsnippet
+
+snippet prod "prod" i
+\\prod_{i=1}^{n}
+endsnippet
+
+snippet ... "ldots" i
+\\ldots
+endsnippet
+
+snippet <= "leq" i
+\\le
+endsnippet
+
+snippet >= "geq" i
+\\ge
+endsnippet
+
+snippet != "neq" i
+\\ne
+endsnippet
+
+snippet $$ "mathjax" i
+$$$0$$
+endsnippet

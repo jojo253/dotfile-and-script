@@ -73,7 +73,7 @@ Plug 'easymotion/vim-easymotion'
 Plug 'vim-scripts/DrawIt'
 
 " 困难模式
-Plug 'takac/vim-hardtime'
+" Plug 'takac/vim-hardtime'
 "==============================
 " 文本格式
 
@@ -121,7 +121,8 @@ let NERDTreeDirArrows = 1
 
 "==============================
 " instant_markdown
-let g:instant_markdown_autostart=0
+let g:instant_markdown_autostart=1
+let g:instant_markdown_mathjax = 1
 
 let g:pydiction_location='~/.vim/plugged/pydiction/complete-dict'
 
@@ -185,3 +186,11 @@ let g:tagbar_type_markdown = {
 
 "==============================
 let g:hardtime_default_on = 1
+
+"==============================
+"coc
+" inoremap <silent><expr> <c-j>
+	" \ pumvisible() ? "\<C-n>" :
+	" \ <SID>check_back_space() ? "\<c-j>" :
+	" \ coc#refresh()
+" inoremap <expr> <c-k> pumvisible() ? "\<C-p>" : "\<C-h>"

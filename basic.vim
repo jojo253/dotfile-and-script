@@ -13,6 +13,9 @@ let mapleader = ","
 " 搜索高亮
 set hls is
 
+"高亮显示匹配的括号
+set showmatch
+
 " 查找忽略大小写
 " set ignorecase
 

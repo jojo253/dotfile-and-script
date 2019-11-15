@@ -37,6 +37,7 @@ bindsym $mod+v exec terminator -e 'vim'
 bindsym $mod+x exec terminator -e 'ranger'
 bindsym $mod+Ctrl+l exec xtrlock
 bindsym $mod+Ctrl+t exec terminator -e 'htop'
+bindsym $mod+p exec terminator -e 'ask'
 
 # for sound control  
 exec --no-startup-id volumeicon
