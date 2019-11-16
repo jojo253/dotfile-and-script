@@ -52,7 +52,7 @@ Plug 'scrooloose/nerdtree'
 " 操作
 
 " 代码补全
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Plug 'garbas/vim-snipmate'
 Plug 'honza/vim-snippets'
 Plug 'SirVer/ultisnips'
