@@ -1,0 +1,32 @@
+#!/bin/zsh
+
+place=$(pwd)
+when=$(date "+%Y-%m-%d %H:%M:%S")
+cd $HOME/moyugeblog
+# hugo clean
+# echo "###clean complete###"
+hugo
+echo "###generate complete###"
+git add -f *
+echo "###add complete###"
+git commit -m "${when} update"
+echo "###commit complete###"
+git fetch
+echo "###fetch complete###"
+git push
+echo "###push complete###"
+echo "###=============###"
+
+cd public
+git add -f *
+echo "###add complete###"
+git commit -m "${when} update"
+echo "###commit complete###"
+# git fetch
+# echo "###fetch complete###"
+git push
+echo "###push complete###"
+echo "###deploy complete###"
+cd $place
+
+exit 0
